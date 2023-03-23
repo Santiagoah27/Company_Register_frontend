@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
-import { isJSDocNullableType } from "typescript"
 import useCompanies from "../hooks/useCompanies"
 import Alert from "./Alert"
 

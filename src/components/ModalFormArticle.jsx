@@ -13,6 +13,7 @@ const ModalFormArticle = () => {
     const [quantity, setQuantity] = useState('')
 
     const params = useParams()
+    const validateQuantity = /^[0-9\b]+$/;
     
     const {modalFormArticle, handleModalArticle, showAlert, alert, submitArticle, article} = useCompanies()
 
@@ -35,6 +36,14 @@ const ModalFormArticle = () => {
         if([name, quantity].includes('')){
             showAlert({
                 msg: 'Todos los campos son obligatorios',
+                error: true
+            })
+            return
+        }
+
+        if(!validateQuantity.test(quantity)){
+            showAlert({
+                msg: 'Por favor ingresar una cantidad valida',
                 error: true
             })
             return

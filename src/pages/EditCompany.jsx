@@ -11,7 +11,7 @@ const EditCompany = () => {
   }, []);
 
   const handleClick = () => {
-    if(confirm('Deseas eliminar este proyecto?')) {
+    if(confirm('Deseas eliminar esta empresa?')) {
       deleteCompany(params.id)
     }
   }

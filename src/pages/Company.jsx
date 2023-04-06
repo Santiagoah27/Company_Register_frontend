@@ -59,7 +59,7 @@ const Company = () => {
       </button>
       )}
 
-      <p className="font-bold text-xl mt-10">Aritculos de la Empresa</p>
+      <p className="font-bold text-xl mt-10">Articulos de la Empresa</p>
       <div className="flex justify-center">
         <div className="md:w-1/3 lg:w-1/4">
             {msg && <Alert alert={alert}/>} 

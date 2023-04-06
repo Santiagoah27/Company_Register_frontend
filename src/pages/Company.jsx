@@ -5,11 +5,14 @@ import ModalFormArticle from "../components/ModalFormArticle";
 import ModalDeleteArticle from "../components/ModalDeleteArticle";
 import Article from "../components/Article";
 import Alert from "../components/Alert";
+import useAdmin from "../hooks/useAdmin";
 
 
 const Company = () => {
   const params = useParams();
   const { getCompany, company, loading, handleModalArticle, alert} = useCompanies()
+
+  const admin  = useAdmin()
 
   useEffect(() => {
     getCompany(params.id)
@@ -17,11 +20,14 @@ const Company = () => {
 
   const { name } = company
   const { msg } = alert
+
   return (
     loading ? 'Cargando...' : (
       <>
       <div className="flex justify-between">
       <h1 className="font-black text-4xl">{name}</h1>
+
+      { admin && (
 
       <div className="flex items-center gap-2 text-gray-400 hover:text-black">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -36,7 +42,10 @@ const Company = () => {
       </Link>
 
       </div>
+    )}
       </div>
+
+      {admin &&(
       <button
         onClick={handleModalArticle}
         type="button"
@@ -48,6 +57,7 @@ const Company = () => {
 
         Agregar Articulo
       </button>
+      )}
 
       <p className="font-bold text-xl mt-10">Aritculos de la Empresa</p>
       <div className="flex justify-center">

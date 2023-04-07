@@ -14,18 +14,22 @@ const ConfirmAccount = () => {
   useEffect(() => {
     const confirmAccount = async () => {
       try {
+        debugger
         const url = `/users/confirm/${id}`
         const { data } = await axiosClient(url)
+
         setAlert({
           msg: data.msg,
           error: false
         })
         setConfirmAccount(true)
       } catch (error) {
-        setAlert({
-          msg: error.response.data.msg,
-          error: true
-        })
+        setTimeout(() => {
+          setAlert({
+            msg: error.response.data.msg,
+            error: true,
+          });
+        }, 3000);
       }
     }
     confirmAccount()

@@ -1,13 +1,11 @@
+import React from 'react'
 import { Fragment, useState, useEffect } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import useCompanies from '../hooks/useCompanies'
 import Alert from './Alert'
 import { useParams } from 'react-router-dom'
 
-
-
 const ModalFormArticle = () => {
-
     const [id, setId] = useState('')
     const [name, setName] = useState('')
     const [quantity, setQuantity] = useState('')
@@ -125,6 +123,7 @@ const ModalFormArticle = () => {
                                                 type="text"
                                                 id="name"
                                                 placeholder='Nombre del Articulo'
+                                                aria-label='Nombre del artículo'
                                                 className='border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md'
                                                 value={name}
                                                 onChange={e => setName(e.target.value)}
@@ -138,6 +137,7 @@ const ModalFormArticle = () => {
                                                 type="text"
                                                 id="quantity"
                                                 placeholder='Cantidad del Articulo'
+                                                aria-label='Cantidad'
                                                 className='border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md'
                                                 value={quantity}
                                                 onChange={e => setQuantity(e.target.value)}

@@ -1,3 +1,4 @@
+import React from 'react'
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import useCompanies from "../hooks/useCompanies";
@@ -63,15 +64,16 @@ const CompanyForm = () => {
       <div className="mb-5">
         <label
           className="text-gray-700 uppercase font-bold text-sm"
-          htmlFor="name"
+          htmlFor="company-name"
         >
           Nombre Empresa
         </label>
         <input
-          id="name"
+          id="company-name"
           type="text"
           className="border w-full p-2 mt-2 placeholder-gray-400 rounded-md"
           placeholder="Nombre de la Empresa"
+          aria-label="Nombre de la empresa"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
@@ -79,15 +81,16 @@ const CompanyForm = () => {
       <div className="mb-5">
         <label
           className="text-gray-700 uppercase font-bold text-sm"
-          htmlFor="name"
+          htmlFor="company-address"
         >
           Dirección Empresa
         </label>
         <input
-          id="name"
+          id="company-address"
           type="text"
           className="border w-full p-2 mt-2 placeholder-gray-400 rounded-md"
           placeholder="Dirección de la Empresa"
+          aria-label="Dirección"
           value={address}
           onChange={(e) => setAddress(e.target.value)}
         />
@@ -95,15 +98,16 @@ const CompanyForm = () => {
       <div className="mb-5">
         <label
           className="text-gray-700 uppercase font-bold text-sm"
-          htmlFor="name"
+          htmlFor="company-nit"
         >
           NIT
         </label>
         <input
-          id="name"
+          id="company-nit"
           type="text"
           className="border w-full p-2 mt-2 placeholder-gray-400 rounded-md"
           placeholder="NIT de la Empresa"
+          aria-label="NIT"
           value={NIT}
           onChange={(e) => setNIT(e.target.value)}
         />
@@ -111,15 +115,16 @@ const CompanyForm = () => {
       <div className="mb-5">
         <label
           className="text-gray-700 uppercase font-bold text-sm"
-          htmlFor="name"
+          htmlFor="company-phone"
         >
           Teléfono
         </label>
         <input
-          id="name"
+          id="company-phone"
           type="text"
           className="border w-full p-2 mt-2 placeholder-gray-400 rounded-md"
           placeholder="Teléfono de la Empresa"
+          aria-label="Teléfono"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
         />

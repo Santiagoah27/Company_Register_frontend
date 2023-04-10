@@ -1,3 +1,4 @@
+import React from 'react'
 import { Link, useNavigate } from "react-router-dom"
 import { useState } from "react"
 import Alert from "../components/Alert"
@@ -8,6 +9,7 @@ const Login = () => {
   const [ email, setEmail ] = useState('')
   const [ password, setPassword ] = useState('')
   const [ alert, setAlert ] = useState({})
+
   const { setAuth } = useAuth()
 
   const navigate = useNavigate()
@@ -56,6 +58,7 @@ const Login = () => {
             <input 
                 id="email"
                 type="email"
+                aria-label="Email"
                 placeholder="Email de Registro"
                 className="w-full mt-3 p-3 border rounded-xl bg-gray-100"
                 value={email}
@@ -67,6 +70,7 @@ const Login = () => {
             <input 
                 id="password"
                 type="password"
+                aria-label="Password"
                 placeholder="Password de Registro"
                 className="w-full mt-3 p-3 border rounded-xl bg-gray-100"
                 value={password}

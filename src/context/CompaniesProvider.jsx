@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axiosClient from "../config/axiosClient";
 import useAuth from "../hooks/useAuth";
 
+
 const CompaniesContext = createContext()
 
 const CompaniesProvider = ({children}) => {

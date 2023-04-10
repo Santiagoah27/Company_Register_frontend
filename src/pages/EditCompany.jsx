@@ -1,3 +1,4 @@
+import React from 'react'
 import useCompanies from "../hooks/useCompanies"
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";

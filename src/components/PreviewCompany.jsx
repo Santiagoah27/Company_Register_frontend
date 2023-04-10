@@ -1,3 +1,4 @@
+import React from 'react'
 import { Link } from "react-router-dom"
 const PreviewCompany = ({company}) => {
     const { name, NIT, _id } = company 

@@ -1,3 +1,4 @@
+import React from 'react'
 import useCompanies from "../hooks/useCompanies";
 import useAdmin from "../hooks/useAdmin";
 

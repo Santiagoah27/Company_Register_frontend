@@ -14,7 +14,8 @@ Esta aplicación permite a los usuarios iniciar sesión y gestionar la informaci
 
 ## Pruebas
 
-Ejecute `npm test` para ejecutar las pruebas unitarias y de integración.
+1. En la carpeta config en el archivo axiosClient.jsx debe cambiar en la baseURL import.meta por process
+2. Ejecute `npm test` para ejecutar las pruebas unitarias.
 
 ## Despliegue
 

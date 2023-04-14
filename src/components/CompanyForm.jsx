@@ -15,6 +15,7 @@ const CompanyForm = () => {
   const { showAlert, alert, submitCompany, company } = useCompanies();
 
   const validatePhone = /^([0-9]{7,8}|[0-9]{10})$/;
+  const validateNIT = /^[0-9]{9}-[0-9]$/;
 
   useEffect(() => {
     if (params.id) {
@@ -39,6 +40,14 @@ const CompanyForm = () => {
     if (!validatePhone.test(phone)) {
       showAlert({
         msg: "Por favor ingresar un teléfono valido, recuerde número fijo 7 u 8 dígitos y celular 10",
+        error: true,
+      });
+      return;
+    }
+
+    if (!validateNIT.test(NIT)) {
+      showAlert({
+        msg: "Por favor ingresar un NIT valido, recuerde son 9 caracteres seguido de un guion y el digito de verificación",
         error: true,
       });
       return;

@@ -75,7 +75,14 @@ const CompaniesProvider = ({children}) => {
             }, 3000);
 
         } catch (error) {
-            console.log(error)
+            setAlert({
+                msg: error.response.data.msg,
+                error: true
+            })
+            setTimeout(() => {
+                setAlert({})
+                navigate('/companies')
+            }, 3000);
         }
     }
 
